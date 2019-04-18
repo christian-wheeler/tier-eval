@@ -13,6 +13,7 @@ import { EffectsModule } from '@ngrx/effects'
 import { StoreModule } from '@ngrx/store'
 import { AngularFireModule } from '@angular/fire'
 import { AngularFirestoreModule } from '@angular/fire/firestore'
+import { NetworkModule } from './network/network.module'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore'
     !environment.production ? StoreDevtoolsModule.instrument() : [],
 
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    NetworkModule
   ],
   providers: [],
   bootstrap: [AppComponent],
